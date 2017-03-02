@@ -1,0 +1,15 @@
+{
+  "name": "jquery-countdownTimer",
+  "homepage": "https://github.com/harshen/jquery-countdownTimer",
+  "version": "1.7.0",
+  "_release": "1.7.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.7.0",
+    "commit": "cf5983a965091359c362ce222cd7e4117dedd8d4"
+  },
+  "_source": "https://github.com/harshen/jquery-countdownTimer.git",
+  "_target": "^1.7.0",
+  "_originalSource": "https://github.com/harshen/jquery-countdownTimer.git",
+  "_direct": true
+}

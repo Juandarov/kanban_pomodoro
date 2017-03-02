@@ -1,0 +1,21 @@
+{
+  "name": "kaban_pomodoro",
+  "homepage": "",
+  "authors": [
+    "juandarov <juandarov@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery-countdownTimer": "https://github.com/harshen/jquery-countdownTimer.git#^1.7.0"
+  }
+}

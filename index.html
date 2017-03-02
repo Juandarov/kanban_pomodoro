@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>kaban pomodoro</title>
+
+    <link rel="stylesheet" href="static/external/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/external/jquery-countdownTimer/CSS/jquery.countdownTimer.css">
+
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+
+<body>
+
+    <h1>Kanban Pomodoro</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 new">
+                <input id="newtache" type="text" placeholder="Nouvelle tâche">
+                <button id="btnClicker" type="button" name="button">Ajouter</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="">
+                    <h2>A Faire</h2>
+                </div>
+
+                <div class="tableau">
+                    <ul></ul>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="triangle">
+                    <div id="triangle_right"></div>
+                    <h2>En Cours</h2>
+                </div>
+
+                <div class="tableau">
+                    <div id="hms_timer"><span id="future_date"><span></div>
+                    <button id="pauseBtnhms" type="button" name="button">Pause</button>
+                    <button id="stopBtnhms" type="button" name="button">Stop</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="triangle">
+                    <div id="triangle_right"></div>
+                    <h2>Fait</h2>
+                </div>
+                <div class="tableau">
+                    <p class="fait">Tâches 1</p>
+                    <p class="fait">Tâches 2</p>
+                    <p class="fait">Tâches 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="static/external/jquery/dist/jquery.min.js"></script>
+    <script src="static/external/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="static/external/jquery-countdownTimer/jquery.countdownTimer.min.js"></script>
+
+    <script src="static/js/script.js"></script>
+
+</body>
+
+</html>
