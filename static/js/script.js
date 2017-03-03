@@ -36,18 +36,14 @@ $(document).ready(function() {
                     timeUp: timeisUp
                 });
 
-                $(".btn-danger").click(function() {
-                    $("#hms_timer").countdowntimer({
-                            minutes: 00,
-                            seconds: 00,
-                            size: "lg",
-                            timeUp: timeisUp
-                    });
-                    working = false;
-                });
-
-
-
+                // $(".btn-danger").click(function() {
+                //     $("#hms_timer").countdowntimer({
+                //             minutes: 00,
+                //             seconds: 00,
+                //             size: "lg",
+                //             timeUp: timeisUp
+                //     });
+                // });
                 function timeisUp() {
                     $("#encours").append(
                         '<div class="finishquest">' +
