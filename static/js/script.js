@@ -20,26 +20,39 @@ $(document).ready(function() {
         $(".taches").click(function() {
             $(this).remove();
             $(this).appendTo("#encours");
-            $(function() {
-                $("#hms_timer").countdowntimer({
-                    minutes: 00,
-                    seconds: 03,
-                    size: "lg",
-                    pauseButton: "pauseBtnhms",
-                    stopButton: "stopBtnhms",
-                    timeUp: timeisUp
-                    // $(this).remove();
+            $(this).addClass("tachesquest");
+
+            $("#hms_timer").countdowntimer({
+                minutes: 00,
+                seconds: 03,
+                size: "lg",
+                pauseButton: "pauseBtnhms",
+                stopButton: "stopBtnhms",
+                timeUp: timeisUp
+            });
+
+            function timeisUp() {
+                $("#encours").append('<div class="finishquest">' + '<button type="button" class="btn btn-warning">Restart</button>' + '<p>FINISH?</p>' + '<button type="button" class="btn btn-success">Success</button>' + '</div>');
+
+                $(".btn-success").click(function() {
+                    $(".finishquest").remove();
+                    $(".tachesquest").appendTo("#fait");
                 });
 
-                function timeisUp() {
-                    $("#encours").append('<div class="finishquest">' + '<button type="button" class="btn btn-warning">Restart</button>' + '<p>FINISH?</p>' + '<button type="button" class="btn btn-success">Success</button>' + '</div>');
+                $(".btn-warning").click(function() {
+                    $(".finishquest").remove();
 
-                    $("finish").click(function() {
-                        
+                    $("#hms_timer").countdowntimer({
+                        minutes: 00,
+                        seconds: 03,
+                        size: "lg",
+                        pauseButton: "pauseBtnhms",
+                        stopButton: "stopBtnhms",
+                        timeUp: timeisUp
                     });
 
-                }
-            })
+                });
+            }
         });
     });
 
