@@ -1,6 +1,5 @@
-
 body {
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
@@ -50,7 +49,7 @@ div.col-md-4:nth-child(2) > div:nth-child(1) > h2:nth-child(1), div.col-md-4:nth
 
 .tableau {
     border: solid 2px black;
-    height: 35em;
+    min-height: 35em;
 }
 
 
@@ -168,6 +167,7 @@ div.col-md-4:nth-child(2) > div:nth-child(1) > h2:nth-child(2) {
 
 h3 {
     text-align: center;
+    font-style: italic;
     text-transform: uppercase;
     font-weight: bold;
     color: rgb(141, 141, 142);

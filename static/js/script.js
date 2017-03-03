@@ -8,6 +8,7 @@ $(document).ready(function() {
     //     });
     // });
 
+    var working = false;
     $("#btnClicker").on("click", function() {
         $('ul').append('<li>' + '<div class="taches">' + '<p id="myDiv">' + '<span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>' + $('#newtache').val() + '</p>' + '<div class="triangle_right"></div>' + '</div>' + '</li>');
 
@@ -17,45 +18,58 @@ $(document).ready(function() {
         });
 
         // MOVE TACHE TO EN COURS
-        $(".taches").click(function() {
-            $(this).remove();
-            $(this).appendTo("#encours");
-            $(this).addClass("tachesquest");
-            $("h3").remove();
+        $(".taches").on("click", function() {
+            if(working == false) {
+                working = true;
 
-            $("#hms_timer").countdowntimer({
-                minutes: 00,
-                seconds: 05,
-                size: "lg",
-                pauseButton: "pauseBtnhms",
-                stopButton: "stopBtnhms",
-                timeUp: timeisUp
-            });
+                $(this).remove();
+                $(this).appendTo("#encours");
+                $(this).addClass("tachesquest");
+                $("h3").remove();
 
-            function timeisUp() {
-                $("#encours").append('<div class="finishquest">' + '<button type="button" class="btn btn-warning">Restart</button>' + '<p>FINISH?</p>' + '<button type="button" class="btn btn-success">Success</button>' + '</div>');
-
-                $(".btn-success").click(function() {
-                    $(".finishquest").remove();
-                    $(".tachesquest").appendTo("#fait");
+                $("#hms_timer").countdowntimer({
+                    minutes: 00,
+                    seconds: 10,
+                    size: "lg",
+                    pauseButton: "pauseBtnhms",
+                    stopButton: "stopBtnhms",
+                    timeUp: timeisUp
                 });
 
-                $(".btn-warning").click(function() {
-                    $(".finishquest").remove();
+                function timeisUp() {
+                    $("#encours").append(
+                        '<div class="finishquest">' +
+                        '<button type="button" class="btn btn-warning">Restart</button>' +
+                        '<p>FINISH?</p>' +
+                        '<button type="button" class="btn btn-success">Success</button>' +
+                        '</div>');
 
-                    $("#hms_timer").countdowntimer({
-                        minutes: 00,
-                        seconds: 03,
-                        size: "lg",
-                        pauseButton: "pauseBtnhms",
-                        stopButton: "stopBtnhms",
-                        timeUp: timeisUp
-                    });
+                        $(".btn-success").click(function() {
+                            working = false;
+                            $(".finishquest").remove();
+                            $(".tachesquest").appendTo("#fait");
+                            // $('#hms_timer').val();
+                            //
+                            // console.log($('#hms_timer').val());
+                        });
 
-                });
+                        $(".btn-warning").click(function() {
+
+                            $(".finishquest").remove();
+                            $("#hms_timer").countdowntimer({
+                                minutes: 00,
+                                seconds: 10,
+                                size: "lg",
+                                pauseButton: "pauseBtnhms",
+                                stopButton: "stopBtnhms",
+                                timeUp: timeisUp
+                            });
+
+                        });
+
+                    }
             }
         });
     });
-
 
 });
