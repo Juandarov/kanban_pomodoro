@@ -21,6 +21,7 @@ $(document).ready(function() {
             $(this).remove();
             $(this).appendTo("#encours");
             $(this).addClass("tachesquest");
+            $("h3").remove();
 
             $("#hms_timer").countdowntimer({
                 minutes: 00,

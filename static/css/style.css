@@ -162,6 +162,12 @@ div.col-md-4:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
         text-align: center;
     }
 
+h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(141, 141, 142);
+}
 
 div.col-md-4:nth-child(2)>div:nth-child(2) {
     display: flex;
