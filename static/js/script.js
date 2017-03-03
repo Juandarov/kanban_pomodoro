@@ -25,7 +25,7 @@ $(document).ready(function() {
 
             $("#hms_timer").countdowntimer({
                 minutes: 00,
-                seconds: 03,
+                seconds: 05,
                 size: "lg",
                 pauseButton: "pauseBtnhms",
                 stopButton: "stopBtnhms",
@@ -56,7 +56,6 @@ $(document).ready(function() {
             }
         });
     });
-
 
 
 });
