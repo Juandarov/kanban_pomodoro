@@ -2,10 +2,8 @@ $(document).ready(function() {
     // $(function() {
     //     $("#hms_timer").countdowntimer({
     //         minutes: 00,
-    //         seconds: 05,
+    //         seconds: 00,
     //         size: "lg",
-    //         pauseButton: "pauseBtnhms",
-    //         stopButton: "stopBtnhms",
     //         timeUp: timeisUp
     //     });
     // });
@@ -24,21 +22,27 @@ $(document).ready(function() {
             $(this).appendTo("#encours");
             $(function() {
                 $("#hms_timer").countdowntimer({
-                    minutes: 25,
-                    seconds: 00,
+                    minutes: 00,
+                    seconds: 03,
                     size: "lg",
                     pauseButton: "pauseBtnhms",
-                    stopButton: "stopBtnhms"
+                    stopButton: "stopBtnhms",
+                    timeUp: timeisUp
                     // $(this).remove();
                 });
 
+                function timeisUp() {
+                    $("#encours").append('<div class="finishquest">' + '<button type="button" class="btn btn-warning">Restart</button>' + '<p>FINISH?</p>' + '<button type="button" class="btn btn-success">Success</button>' + '</div>');
+
+                    $("finish").click(function() {
+                        
+                    });
+
+                }
             })
         });
     });
 
-    function timeisUp() {
-        // alert("yolo")
-    }
 
 
 });
