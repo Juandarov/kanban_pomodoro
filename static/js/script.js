@@ -29,12 +29,24 @@ $(document).ready(function() {
 
                 $("#hms_timer").countdowntimer({
                     minutes: 00,
-                    seconds: 10,
+                    seconds: 05,
                     size: "lg",
                     pauseButton: "pauseBtnhms",
                     stopButton: "stopBtnhms",
                     timeUp: timeisUp
                 });
+
+                $(".btn-danger").click(function() {
+                    $("#hms_timer").countdowntimer({
+                            minutes: 00,
+                            seconds: 00,
+                            size: "lg",
+                            timeUp: timeisUp
+                    });
+                    working = false;
+                });
+
+
 
                 function timeisUp() {
                     $("#encours").append(
@@ -58,7 +70,7 @@ $(document).ready(function() {
                             $(".finishquest").remove();
                             $("#hms_timer").countdowntimer({
                                 minutes: 00,
-                                seconds: 10,
+                                seconds: 05,
                                 size: "lg",
                                 pauseButton: "pauseBtnhms",
                                 stopButton: "stopBtnhms",

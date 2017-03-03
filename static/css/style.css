@@ -5,6 +5,15 @@ body {
 
 h1 {
     text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+    text-transform: uppercase;
+    width: 40%;
+    margin: 0.5em auto;
+    background-image: url(../images/time-is-money-concept-hd-stock-video-business-collage-with-clock-numbers-background-collage-symbolizing-time-money-and-business-business-vintage-abstract-background_rcnbrmyi__S0000.jpg);
+    padding: 1em;
+    color: white;
+    border-radius: 10px;
 }
 
 .col-md-12 {
@@ -49,7 +58,7 @@ div.col-md-4:nth-child(2) > div:nth-child(1) > h2:nth-child(1), div.col-md-4:nth
 
 .tableau {
     border: solid 2px black;
-    min-height: 35em;
+    min-height: 40em;
 }
 
 
@@ -128,7 +137,6 @@ div.col-md-4:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
         width: 60%;
         margin: 1em auto;
         text-align: center;
-        box-shadow: 0px 0px 10px 1px rgb(156, 208, 255);
     }
 
     .colorDefinition {
